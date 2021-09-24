@@ -9,31 +9,35 @@
 
 {% block body %}
 
-<div>
+<div class="displayContainer">
     <h1>RankMe</h1>
 
-    <div>
-        <input type="text" placeholder="Add something to rank..." required>
+    <div class="entryContainer">
+        <input id="entryText" type="text" placeholder="Add something to rank..." required>
     </div>
 
-    <div>
-        <div>
-            <button type="button">ADD</button>
+    <div class="inputContainer">
+        <p id="inputText"></p>
+    </div>
+
+    <div class="buttonContainer">
+        <div class="addContainer">
+            <button class="" id="addBtn" type="button" onclick="addEntry();">ADD</button>
         </div>
 
-        <div>
-            <button type="button">CLEAR</button>
+        <div class="clearContainer">
+            <button class="" id="clearBtn" type="button" onclick="clearBox('inputText')">CLEAR</button>
         </div>
     </div>
 
-    <div>
-        <a href="">
-          <button type="button">START</button>
+    <div class="startContainer">
+        <a href="/sorter" id="sortPage">
+          <button class="" id="startBtn" type="button">START</button>
         </a>
     </div>
 
 </div>
 
+<script src="static/js/index.js"></script>
 
-
-{% endblock %}
+{% endblock %} 
