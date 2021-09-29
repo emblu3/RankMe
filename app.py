@@ -11,5 +11,10 @@ def index():
 def sorter():
     return render_template('sorter.html')
 
+@app.route('/results')
+def results():
+    return render_template('results.html')
+
+
 if __name__ == '__main__':
     app.run(debug=False) 
