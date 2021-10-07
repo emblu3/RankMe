@@ -1,0 +1,147 @@
+.displayContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+h1{
+    font-size: 15rem;
+    font-family: 'Dosis', sans-serif;
+    color: rgba(240, 248, 255, 0.979);
+    margin-left: -10px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    color: rgb(39, 39, 39);
+ }
+
+
+#entryText {
+    font-size: 1rem;
+    font-family: 'Poppins', 'sans-serif';
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7), 
+        rgba(255, 255, 255, 0.3));
+    border: none;
+    width: 37.5rem;
+    padding: 0.6rem;
+    border-radius: 1rem;
+}
+
+.inputContainer{
+    width: 80vw;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+#inputText{
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Poppins', 'sans-serif';
+    color: floralwhite;
+    word-wrap: break-word;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.addContainer{
+    margin-right: .7rem;
+}
+
+.entryButton {
+    font-family: 'Poppins', 'sans-serif';
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-image-slice: 1;
+    border-image-width: 3px;
+    transition: background 0.5s linear 0.1s , color 0.5s linear 0s;
+    color: white;
+}
+
+#addBtn{
+    background: rgba(187, 255, 187, .3);
+    padding: 0rem 1.6rem;
+    border-image-source: linear-gradient(
+        to right top,
+        rgba(187, 255, 187, 0.76),
+        rgb(255, 255, 255));
+}
+
+.addContainer > #addBtn:hover{
+    background: rgb(187, 255, 187);
+    color: black;
+}
+
+.clearContainer {
+    margin-left: .7rem;
+}
+
+#clearBtn{
+    padding: 0rem 1rem;
+    background: rgba(255, 187, 187, 0.3);
+    border-image-source: linear-gradient(
+        to right top,
+        rgba(255, 187, 187, 0.76),
+        rgb(255, 255, 255));
+}
+
+.clearContainer > #clearBtn:hover{
+    background: rgb(255, 187, 187);
+    color: black;
+}
+
+#startBtn{
+    background: linear-gradient(
+        to right top,
+        rgba(187, 194, 255, 0.76),
+        rgb(183, 200, 255));
+    font-size: 2.5rem;
+    border-radius: 10px;
+    padding: 0px 4rem;
+    border: transparent;
+    color: rgb(245, 245, 245);
+    text-shadow: 1px 1px 10px rgb(168, 162, 221);
+    transition: background-color 0.5s ease-out 0.1s , color 0.5s linear 0s, text-shadow 0.5s ease-out 0.1s ;
+    box-shadow: none;
+}
+
+#sortPage > #startBtn:hover{
+    color: rgb(6, 6, 7);
+    background-color: rgb(205, 187, 255);
+    text-shadow: 2px 2px 10px rgb(221, 218, 255);
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    #entryText{
+        width: 75vw;
+    }
+    h1{
+        font-size: 30vw;
+    }
+  }
+
+@media only screen and (max-width: 415px) {
+    #startBtn{
+        font-size: 9.5vw;
+        padding: 0 15.8vw;
+    }
+    .entryButton{
+        font-size: 5vw;
+    }
+    .addContainer{
+        margin-right: 2.5vw;
+    }
+    .clearContainer{
+        margin-left: 2.5vw;
+    }
+}

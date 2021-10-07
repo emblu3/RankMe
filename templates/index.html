@@ -3,6 +3,7 @@
 
 
 {% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {% endblock %}
 
 
@@ -22,17 +23,17 @@
 
     <div class="buttonContainer">
         <div class="addContainer">
-            <button class="" id="addBtn" type="button" onclick="addEntry();">ADD</button>
+            <button class="entryButton" id="addBtn" type="button" onclick="addEntry();">ADD</button>
         </div>
 
         <div class="clearContainer">
-            <button class="" id="clearBtn" type="button" onclick="clearBox('inputText')">CLEAR</button>
+            <button class="entryButton" id="clearBtn" type="button" onclick="clearBox('inputText')">CLEAR</button>
         </div>
     </div>
 
     <div class="startContainer">
         <a href="/sorter" id="sortPage">
-          <button class="" id="startBtn" type="button">START</button>
+          <button class="entryButton" id="startBtn" type="button">START</button>
         </a>
     </div>
 
