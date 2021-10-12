@@ -1,0 +1,139 @@
+.displayContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 13rem;
+    font-family: 'Dosis', sans-serif;
+    color: rgba(240, 248, 255, 0.979);
+}
+
+.sortTable {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0 2rem 0;
+}
+
+.choiceContainer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 447px;
+}
+
+.sortBtn {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 1rem;
+    line-height: 3.4rem;
+    cursor: pointer;
+    color: floralwhite;
+    font-size: 2.5rem;
+    width: 100%;
+    word-wrap: break-word;
+    padding: 1rem;
+    z-index: 2;
+    cursor: pointer;
+    border-image-slice: 1;
+    border-image-width: 3px;
+}
+
+#leftBtn {
+    background: rgba(255, 187, 252, 0.3);
+    border-image-source: linear-gradient(
+        to right top,
+        rgba(255, 187, 252, 0.76),
+        rgb(255, 255, 255));
+    transition: background 0.5s linear 0.1s , color 0.5s linear 0s;
+    color: white;
+}
+
+#leftBtn:hover,
+#leftBtn:active {
+    background: rgb(255, 187, 252);
+    color: black;
+}
+
+.vsContainer{
+    display: flex;
+    justify-content: center;
+    min-height: 6rem;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+#vs{
+    text-align: center;
+    color: floralwhite;
+    font-family: 'Armata', sans-serif;
+}
+
+#rightBtn {
+    background: rgba(187, 216, 255, 0.3);
+    border-image-source: linear-gradient(
+        to right top,
+        rgba(187, 216, 255, 0.76),
+        rgb(255, 255, 255));
+    transition: background 0.5s linear 0.1s , color 0.5s linear 0s;
+    color: white;
+}
+
+#rightBtn:hover,
+#rightBtn:active {
+    background: rgb(187, 216, 255);
+    color: black;
+}
+
+.instructionContainer{
+    font-family: 'Poppins', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: floralwhite;
+}
+
+#description{
+    font-size: 1rem;
+}
+
+#mistake{
+    font-size: .8rem;
+}
+
+
+@media only screen and (max-width: 1175px) {
+    h1{
+        font-size: 17.7vw;
+    }
+    .choiceContainer{
+        width: 38vw;
+     }
+}
+
+@media only screen and (max-width: 905px) {
+    .sortBtn{
+        font-size: 4.5vw;
+        line-height: 6vw;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .vsContainer{
+        padding: 0 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .vsContainer{
+        font-size: 5.5vw;
+    }
+    #description{
+        font-size: 4vw;
+    }
+    #mistake{
+        font-size: 3.1vw;
+    }
+}

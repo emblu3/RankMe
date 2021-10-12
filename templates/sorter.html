@@ -3,29 +3,28 @@
 
 
 {% block head %}
-<title>Rank Mii</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sorter.css') }}">
 {% endblock %}
 
 
 
 {% block body %}
 <div class="displayContainer">
-    <div class="titleContainer">
-        <h2>Time to Rank</h2>
-    </div>
+    <h1>Time to Rank</h1>
     <div class="sortTable">
         <div class="choiceContainer" id="leftContainer">
-            <button class="" id="leftBtn" type="button" onclick="getLeft();"></button>
+            <button class="sortBtn" id="leftBtn" type="button" onclick="getLeft();"></button>
         </div> 
         <div class="vsContainer">
             <p id='vs'>VS</p>
         </div>
         <div class="choiceContainer" id="rightContainer">
-            <button class="" id="rightBtn" type="button" onclick="getRight();"></button>  
+            <button class="sortBtn" id="rightBtn" type="button" onclick="getRight();"></button>  
         </div>
     </div>
     <div class="instructionContainer">
         <p id='description'>Click on the one you prefer and we'll show you your results on the next page!</p>
+        <p id='mistake'>If you made a mistake, refresh the page to reset the rankings.</p>
     </div>
 </div>
 
