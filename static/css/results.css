@@ -1,0 +1,127 @@
+.displayContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 13rem;
+    font-family: 'Dosis', sans-serif;
+    color: rgba(240, 248, 255, 0.979);
+}
+
+
+.resultTable {
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 1.5rem;
+    box-shadow: 10px 5px 100px rgba(0, 0, 0, 0.411);
+    z-index: 1;
+    border-collapse: collapse;
+    border: 2px solid #000;
+    text-align: center;
+    margin: .5rem 1rem 2rem 1rem;
+}
+
+#legend{
+    background: rgb(17, 17, 19);
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#rank{
+    padding: 0 1rem;
+    width: 5rem;
+}
+#item{
+    padding: 0 1rem;
+    width: 25rem;
+}
+
+td{
+    border: 2px solid #000;
+    padding: 10px;
+    word-wrap: break-word;
+    max-width: 525px;
+}
+
+.resultTable tr:nth-child(odd){
+    background: #fcf5ff;
+}
+.resultTable tr:nth-child(even){
+    background: #fff0fd;
+}
+
+.indexContainer{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+#homeBtn{
+    font-family: 'Poppins', 'sans-serif';
+    background: linear-gradient(
+        to right top,
+        rgba(187, 194, 255, 0.76),
+        rgb(183, 200, 255));
+    font-size: 2.5rem;
+    border-radius: 10px;
+    padding: 0px 4rem;
+    cursor: pointer;
+    border: transparent;
+    color: rgb(245, 245, 245);
+    text-shadow: 1px 1px 10px rgb(168, 162, 221);
+    transition: background-color 0.5s ease-out 0.1s , color 0.5s linear 0s, text-shadow 0.5s ease-out 0.1s ;
+    margin: 0 0 3rem 0;
+}
+
+#homeBtn:hover{
+    color: rgb(6, 6, 7);
+    background-color: rgb(205, 187, 255);
+    text-shadow: 2px 2px 10px rgb(221, 218, 255);
+}
+
+
+@media only screen and (max-width: 1050px) {
+    td{
+        max-width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    h1{
+        font-size: 26.8vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    td{
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    #legend{
+        font-size: 2rem;
+    }
+    #rank{
+        padding: 0 1rem;
+    }
+    td{
+        font-size: 1rem;
+    }
+    #homeBtn{
+        font-size: 9.5vw;
+        padding: 0 15.8vw;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #legend{
+        font-size: 10vw;
+    }
+    td{
+        font-size: 5vw;
+    }
+}

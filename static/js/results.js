@@ -19,3 +19,9 @@ for (let i = 0; i < cells.length; ++i) {
     cells[i].innerHTML = result[i];
 }
 
+// animate table display
+$("table .bodyRow").hide();
+$("table .bodyRow").each(function(index){
+    $(this).delay(index*250).show(500);
+});
+

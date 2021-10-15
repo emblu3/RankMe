@@ -3,30 +3,30 @@
 
 
 {% block head %}
-<title>Rank Mii</title>
-
+<link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
 {% endblock %}
 
 
 
 {% block body %}
 <div class="displayContainer">
-    <div class='titleContainer'>
-        <h2>RESULTS</h2>
+    <h1>RESULTS</h1>
+    <div class="resultContainer">
+        <table class='resultTable'>
+            <thead>
+                <tr id='legend'>
+                    <th id='rank'>Rank</th>
+                    <th id='item'>Item</th>
+                </tr>
+            </thead>
+            <tbody class="tableBody">
+            </tbody>
+        </table>
     </div>
-    <div id="resultContainer">
-        <div class='rankSpace'>
-            <table class='resultTable'>
-                <thead>
-                    <tr id='legend'>
-                        <th id='rank'>Rank</th>
-                        <th id='item'>Item</th>
-                    </tr>
-                </thead>
-                <tbody class="tableBody">
-                </tbody>
-            </table>
-        </div>
+    <div class="indexContainer">
+        <a href="/" id="indexPage">
+          <button id='homeBtn' type="button">HOME</button>
+        </a>
     </div>
 </div>
 
