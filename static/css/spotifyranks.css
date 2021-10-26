@@ -1,0 +1,113 @@
+.displayContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  font-size: 10rem;
+  color: rgba(240, 248, 255, 0.979);
+  line-height: 9rem;
+}
+
+.cardsContainer{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  perspective: 1000px;
+  margin: 1.5rem 3rem;
+}
+
+.flipContainer {
+  position: relative;
+  width: 125px;
+  height: 300px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flipContainer:hover{
+  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+}
+
+.flipFront, .flipBack {
+  font-family: 'Poppins', 'sans-serif';
+  position: absolute;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 0.5rem; */
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 10px;
+}
+
+#frontText{
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.flipBack {
+  display: flex;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+
+#songsBack{
+  background-color: rgba(187, 203, 255, 0.753);
+}
+
+#artists-back{
+  background-color: rgba(255, 187, 252, 0.753);
+}
+
+#backText{
+  font-size: 1.6rem;
+}
+
+.backBtn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeBtn {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1rem;
+  border-image-slice: 1;
+  border-image-width: 3px;
+  margin: .5rem 0;
+  text-align: center;
+  padding: .5rem 2rem;
+  background: rgba(138, 189, 138, 0.3); 
+  border-image-source: linear-gradient(
+      to right top,
+      rgba(187, 255, 187, 0.76),
+      rgb(193, 255, 181));
+  transition: background 0.5s linear 0.1s , color 0.5s linear 0s;
+  color: white;
+}
+
+.flipFront p {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+.flipBack p {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+
+.instructionContainer{
+  text-align: center;
+  color: floralwhite;
+  font-family: 'Poppins', 'sans-serif';
+}

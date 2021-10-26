@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/spotifyranks.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="displayContainer">
+    <h1>What to Rank?</h1>
+    <div class="cardsContainer">
+        <div class="flipContainer">
+            <div class="flipFront">
+                <p id="frontText">Rank my top 5 songs!</p>
+            </div>
+            <div class="flipBack" id="songsBack">
+                <p id='backText'>Rank my songs from...</p>
+                <div class="backBtn">
+                    <a href="/sorter" id="songShort" class="nextPage">
+                        <button id='weekBtn' type="button" class="timeBtn">Last 4 Weeks</button>
+                    </a>
+                    <a href="/sorter" id="songMedium" class="nextPage">
+                        <button id='monthBtn' type="button" class="timeBtn">Last 6 Months</button>
+                    </a>
+                    <a href="/sorter" id="songLong" class="nextPage">
+                        <button id='allBtn' type="button" class="timeBtn">All Time</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flipContainer">
+            <div class="flipFront">
+                <p id="frontText">Rank my top 5 artists!</p>
+            </div>
+            <div class="flipBack" id="artistsBack">
+                <p id='backText'>Rank my artists from...</p>
+                <div class="backBtn">
+                    <a href="/sorter" id="artistShort" class="nextPage">
+                        <button id='weekBtn' type="button" class="timeBtn">Last 4 Weeks</button>
+                    </a>
+                    <a href="/sorter" id="artistMedium" class="nextPage">
+                        <button id='monthBtn' type="button" class="timeBtn">Last 6 Months</button>
+                    </a>
+                    <a href="/sorter" id="artistLong" class="nextPage">
+                        <button id='allBtn' type="button" class="timeBtn">All Time</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="instructionContainer">
+        <p id='description'>Click on a card to see your options!</p>
+        <p id='mistake'>You'll get the chance to rank your options after this.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var artists_long = {{ data.artists_long|tojson }}
+    var artists_medium = {{ data.artists_medium|tojson }}
+    var artists_short = {{ data.artists_short|tojson }}
+    var songs_long = {{ data.songs_long|tojson }}
+    var songs_medium = {{ data.songs_medium|tojson }}
+    var songs_short = {{ data.songs_short|tojson }}
+</script>  
+<script src="static/js/spotifyranks.js"></script>  
+
+{% endblock %}
+
+
+

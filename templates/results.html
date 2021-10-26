@@ -11,25 +11,30 @@
 {% block body %}
 <div class="displayContainer">
     <h1>RESULTS</h1>
-    <div class="resultContainer">
-        <table class='resultTable'>
-            <thead>
-                <tr id='legend'>
-                    <th id='rank'>Rank</th>
-                    <th id='item'>Item</th>
-                </tr>
-            </thead>
-            <tbody class="tableBody">
-            </tbody>
-        </table>
+    <div class='ranksContainer'>
+        <script type="text/javascript">
+            var mycookie = Cookies.get('entriesSpot')
+
+            if (mycookie) 
+            {
+            document.write("<div class='resultContainer' id='chosenSpace'><h3>Your <span class='glowChosen'>Chosen</span> Ranks</h3><table class='resultTable'><thead><tr id='legend'><th id='rank'>Rank</th><th id='item'>Item</th></tr></thead><tbody class='tableBody'></tbody></table></div><div class='resultContainer' id='spotifySpace'><h3>Your <span class='glowSpotify'> Spotify </span> Ranks</h3><table class='spotifyTable'><thead><tr id='legend'><th id='rank'>Rank</th><th id='item'>Item</th></tr></thead><tbody class='tableBody2'></tbody></table></div>")
+            }
+            else
+            {
+            document.write("<div class='resultContainer'><table class='resultTable'><thead><tr id='legend'><th id='rank'>Rank</th><th id='item'>Item</th></tr></thead><tbody class='tableBody'></tbody></table></div>")
+            }
+        </script>
     </div>
+
     <div class="indexContainer">
         <a href="/" id="indexPage">
           <button id='homeBtn' type="button">HOME</button>
         </a>
     </div>
+    <div class="stars"></div>
 </div>
 
 <script src="static/js/results.js"></script> 
+<script src="static/js/resultsSpotify.js"></script> 
 
 {% endblock %}

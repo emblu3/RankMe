@@ -88,3 +88,9 @@ $('#sortPage').on('click', function(){
     var entries = JSON.stringify(options)
     Cookies.set('entries', entries)
 });
+
+$('#spotifyPage').on('click', function(){
+    deleteAllCookies()
+    var entriesSpot = JSON.stringify("Spotify")
+    Cookies.set('entriesSpot', entriesSpot)
+});

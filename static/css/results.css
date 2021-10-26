@@ -11,8 +11,70 @@ h1{
     color: rgba(240, 248, 255, 0.979);
 }
 
+.ranksContainer{
+    display: flex;
+}
+.resultContainer{
+    margin: 0 .5rem;
+}
+
+h3{
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 3rem;
+    color: rgba(240, 248, 255, 1);
+    z-index: 2;
+    position: relative;
+    margin-bottom: 0.8rem;
+    justify-content: center;
+}
+
+
+.glowChosen {
+    text-shadow: 5px 5px 30px #FFF000;
+    animation-name: repeat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin: 0 0.1rem;
+}
+@keyframes repeat {
+
+    0% {color: #ffffff; text-shadow: 5px 5px 30px #fffbc7;}
+    20% {color: #fffff1; text-shadow: 5px 5px 30px  #fff786;}
+    40% {color: #fffee6; text-shadow: 5px 5px 30px  #fff461;}
+    60% {color: #fffee6; text-shadow: 5px 5px 30px  #fff461;}
+    80% {color: #fffff1; text-shadow: 5px 5px 30px  #fff344;}
+    100% {color: #ffffff; text-shadow: 5px 5px 30px  #fffbc7;}
+  }
+.glowSpotify {
+    text-shadow: 5px 5px 30px #00ff40;
+    animation-name: repeat2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin: 0 0.1rem;
+}
+@keyframes repeat2 {
+
+    0% {color: #ffffff; text-shadow: 5px 5px 30px #aeffb2;}
+    20% {color: #f1fff4; text-shadow: 5px 5px 30px  #86ffa0;}
+    40% {color: #e6ffee; text-shadow: 5px 5px 30px  #61ff76;}
+    60% {color: #e6ffee; text-shadow: 5px 5px 30px  #37ff62;}
+    80% {color: #f1fff4; text-shadow: 5px 5px 30px  #00ff55;}
+    100% {color: #ffffff; text-shadow: 5px 5px 30px  #aeffb2;}
+  }
+
 
 .resultTable {
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 1.5rem;
+    box-shadow: 10px 5px 100px rgba(0, 0, 0, 0.411);
+    z-index: 1;
+    border-collapse: collapse;
+    border: 2px solid #000;
+    text-align: center;
+    margin: .5rem 1rem 2rem 1rem;
+}
+.spotifyTable {
     font-family: 'Poppins', 'sans-serif';
     font-size: 1.5rem;
     box-shadow: 10px 5px 100px rgba(0, 0, 0, 0.411);
@@ -50,6 +112,12 @@ td{
     background: #fcf5ff;
 }
 .resultTable tr:nth-child(even){
+    background: #fff0fd;
+}
+.spotifyTable tr:nth-child(odd){
+    background: #fcf5ff;
+}
+.spotifyTable tr:nth-child(even){
     background: #fff0fd;
 }
 
@@ -96,12 +164,18 @@ td{
 }
 
 @media only screen and (max-width: 600px) {
+    .ranksContainer{
+        flex-direction: column;
+    }
     td{
         font-size: 4vw;
     }
 }
 
 @media only screen and (max-width: 415px) {
+    h3{
+        font-size: 11.5vw;
+    }
     #legend{
         font-size: 2rem;
     }
@@ -124,4 +198,63 @@ td{
     td{
         font-size: 5vw;
     }
+}
+
+
+
+
+
+
+/* ============================================================================================== 
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+================================================================================================= */
+
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars, .twinkling, .clouds {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  z-index: -1;
+}
+
+.stars {
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+body{
+    height:100%; /* force the BODY element to match the height of the HTML element */
 }
