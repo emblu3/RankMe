@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, session, request
 import os
 import spotipy, time
 from spotipy.oauth2 import SpotifyOAuth
-from secrets import SECRET_KEY, CLIENT_ID, CLIENT_SECRET
+from secrets import *
 
 app = Flask(__name__) 
 
