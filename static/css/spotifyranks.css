@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 h1{
@@ -110,4 +111,16 @@ h1{
   text-align: center;
   color: floralwhite;
   font-family: 'Poppins', 'sans-serif';
+}
+
+@media only screen and (max-width: 415px) {
+  h1{
+    font-size: 38.5vw;
+  }
+}
+
+@media only screen and (max-width: 346px) {
+  h1{
+    font-size: 17vw;
+  }
 }
