@@ -20,12 +20,12 @@ def results():
     return render_template('results.html')
 
 
-app.secret_key = SECRET_KEY
+app.secret_key = os.environ['SECRET_KEY']
 app.config['SESSION_COOKIE_NAME'] = 'RankMee Cookie'
 TOKEN_INFO = 'token_info'
 
-clientid = CLIENT_ID
-clientsecret = CLIENT_SECRET
+clientid = os.environ['CLIENT_ID']
+clientsecret = os.environ['CLIENT_SECRET']
 
 @app.route('/SpotifyLogin')
 def login():
