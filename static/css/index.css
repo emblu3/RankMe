@@ -9,6 +9,7 @@ h1{
     font-size: 15rem;
     font-family: 'Dosis', sans-serif;
     color: rgba(240, 248, 255, 0.979);
+    padding-top: 1rem;
 }
 
 ::-webkit-input-placeholder {

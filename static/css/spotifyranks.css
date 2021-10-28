@@ -9,9 +9,9 @@
 h1{
   text-align: center;
   font-family: 'Dosis', sans-serif;
-  font-size: 10rem;
+  font-size: 9rem;
   color: rgba(240, 248, 255, 0.979);
-  line-height: 9rem;
+  padding: 1rem 1rem;
 }
 
 .cardsContainer{
@@ -119,16 +119,18 @@ h1{
   font-family: 'Poppins', 'sans-serif';
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 909px) {
   h1{
-    font-size: 38.5vw;
+    font-size: 15.5vw;
     line-height: normal;
   }
 }
 
 @media only screen and (max-width: 346px) {
   h1{
-    font-size: 17vw;
+    font-size: 15.5vw;
+    line-height: normal;
+    padding-bottom: 0;
   }
   .cardsContainer{
     justify-content: center;
