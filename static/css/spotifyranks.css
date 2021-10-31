@@ -14,10 +14,18 @@ h1{
   padding: 1rem 1rem;
 }
 
+.flipFront, .flipContainer, .flipBack, .backContents {
+  width: 175px;
+}
+#backText, .backBtn{
+  padding: 0rem 2rem;
+}
+
+
 .cardsContainer{
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 375px;
   perspective: 1000px;
   margin: 1.5rem 3rem;
 }
@@ -98,6 +106,17 @@ h1{
   color: white;
 }
 
+@media (hover: hover) {
+  .nextPage > button:hover{
+    background: rgba(189, 255, 189, 0.822);
+    color: black;
+    border-image-source: linear-gradient(
+        to right top,
+        rgba(0, 0, 0, 0.76),
+        rgba(28, 48, 28, 0.76));
+  }
+}
+
 .flipFront p {
   text-align: center;
   font-size: 1.4rem;
@@ -125,13 +144,22 @@ h1{
     line-height: normal;
   }
 }
+@media only screen and (max-width: 550px){
+  .cardsContainer{
+    width: 340px;
+  }
+  .flipFront, .flipContainer, .flipBack, .backContents {
+    width: 150px;
+  }
+  #backText {
+    padding: 0rem 0rem;
+  }
+  .timeBtn{
+    padding: .5rem 1rem;
+  }
+}
 
 @media only screen and (max-width: 346px) {
-  h1{
-    font-size: 15.5vw;
-    line-height: normal;
-    padding-bottom: 0;
-  }
   .cardsContainer{
     justify-content: center;
   }
